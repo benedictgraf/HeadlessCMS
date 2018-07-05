@@ -1,0 +1,32 @@
+    input, button{
+        float: left;
+
+    }
+
+    #showcase, #view {
+        position: relative;
+        float: left;
+        border-style:solid;
+        border:10px;
+        background: #cccccc;
+        box-shadow: 10px black;
+        height:50vmin;
+        width:50vmin;
+    }
+
+    #view li {
+        text-align: center;
+        margin-top:50%;
+    }
+
+    li{
+        list-style:none;
+        margin: 0 auto;
+
+        }
+
+    .logInForm {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;    }

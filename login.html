@@ -1,0 +1,12 @@
+<div ng-app="mainApp" ng-controller="AuthCtrl">
+    <form ng-submit='login()'>
+
+        <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" id="email" ngModel='email' type="email" placeholder="Email" required>
+        <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" id="password" ngModel='password' type="password" placeholder="Password" required>
+      </form>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        LogIn
+      </button>
+    </div>
