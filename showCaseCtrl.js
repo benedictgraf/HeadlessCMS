@@ -21,12 +21,14 @@ app.controller('showCaseCtrl', ['$scope', '$firebaseArray',
     function($scope, $firebaseArray) {
 
     // CREATE A FIREBASE REFERENCE
-    var showCaseRef = firebase.database().ref('posts');
+    var postsRef1 = firebase.database().ref('posts/section1');
+    var postsRef2 = firebase.database().ref('posts/section2');
     var viewRef = firebase.database().ref('view');
 
 
     // GET Entries AS AN ARRAY
-    $scope.entries = $firebaseArray(showCaseRef);
+    $scope.entries1 = $firebaseArray(postsRef1);
+    $scope.entries2 = $firebaseArray(postsRef2);
     $scope.viewEntries = $firebaseArray(viewRef);
 
     // GET Value of currently clicked Entry
@@ -44,8 +46,11 @@ app.controller('pushCtrl', ['$scope', '$firebaseArray',
     function($scope, $firebaseArray) {
 
     // Get Value of Input -> Write new Post into DB
-    $scope.writeNewPost = function()
-    {firebase.database().ref().child('posts').push({data: $scope.insertNew});
+    $scope.writeNewPost1 = function()
+    {firebase.database().ref().child('posts/section1').push({data: $scope.insertNew});
+    };
+    $scope.writeNewPost2 = function()
+    {firebase.database().ref().child('posts/section2').push({data: $scope.insertNew});
     };
 }]);
 

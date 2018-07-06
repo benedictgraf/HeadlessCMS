@@ -1,17 +1,43 @@
 admin<br>
 <input name="insertTxt" type="text" maxlength="512" id="insertTxt" ng-model="insertNew" class="searchField"/>
-    <button ng-app="mainApp" ng-controller="pushCtrl" ng-click="writeNewPost();" id="send">send</button>
+    <button ng-app="mainApp" ng-controller="pushCtrl" ng-click="writeNewPost1();" id="send">send</button>
 
     <div id="showcase">
-    <li ng-repeat="oneItem in entries" ng-click="setActive($event)">
+    <li ng-repeat="oneItem in entries1" ng-click="setActive($event)">
         {{oneItem.data}}
     </li>
     </div>
 
-    <div id="view">
-    <li ng-repeat="oneView in viewEntries">
-        {{oneView.data}}
+    <!--This is card in view no.1-->
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries">{{oneView.data}}</h2>
+    </div>
+    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries">
+    {{oneView.data}}
+    </div>
+  </div>
+
+
+  <input name="insertTxt" type="text" maxlength="512" id="insertTxt" ng-model="insertNew" class="searchField"/>
+    <button ng-app="mainApp" ng-controller="pushCtrl" ng-click="writeNewPost2();" id="send">send</button>
+
+    <div id="showcase">
+    <li ng-repeat="oneItem in entries2" ng-click="setActive($event)">
+        {{oneItem.data}}
     </li>
-</div>
+    </div>
+
+<!--This is card in view no.1-->
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries">{{oneView.data}}</h2>
+    </div>
+    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries">
+    {{oneView.data}}
+    </div>
+  </div>
+
+
 <button ng-app="mainApp" ng-controller="AuthCtrl" class="btn btn-success" ng-click="Logout()">Logout</button>
 
