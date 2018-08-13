@@ -3,7 +3,7 @@ admin<br>
     <button ng-app="mainApp" ng-controller="pushCtrl" ng-click="writeNewPost1();" id="send">send</button>
 
     <div id="showcase">
-    <li ng-repeat="oneItem in entries1" ng-click="setActive($event)">
+    <li ng-repeat="oneItem in entries1" ng-click="setActive1($event)">
         {{oneItem.data}}
     </li>
     </div>
@@ -11,10 +11,10 @@ admin<br>
     <!--This is card in view no.1-->
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries">{{oneView.data}}</h2>
+      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries1">{{oneView}}</h2>
     </div>
-    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries">
-    {{oneView.data}}
+    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries1">
+    {{oneView}}
     </div>
   </div>
 
@@ -23,7 +23,7 @@ admin<br>
     <button ng-app="mainApp" ng-controller="pushCtrl" ng-click="writeNewPost2();" id="send">send</button>
 
     <div id="showcase">
-    <li ng-repeat="oneItem in entries2" ng-click="setActive($event)">
+    <li ng-repeat="oneItem in entries2" ng-click="setActive2($event)">
         {{oneItem.data}}
     </li>
     </div>
@@ -31,10 +31,10 @@ admin<br>
 <!--This is card in view no.1-->
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries">{{oneView.data}}</h2>
+      <h2 class="mdl-card__title-text" ng-repeat="oneView in viewEntries2">{{oneView}}</h2>
     </div>
-    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries">
-    {{oneView.data}}
+    <div class="mdl-card__supporting-text" ng-repeat="oneView in viewEntries2">
+    {{oneView}}
     </div>
   </div>
 

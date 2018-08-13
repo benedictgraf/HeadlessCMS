@@ -23,21 +23,30 @@ app.controller('showCaseCtrl', ['$scope', '$firebaseArray',
     // CREATE A FIREBASE REFERENCE
     var postsRef1 = firebase.database().ref('posts/section1');
     var postsRef2 = firebase.database().ref('posts/section2');
-    var viewRef = firebase.database().ref('view');
+    var viewRef1 = firebase.database().ref('view/active/section1');
+    var viewRef2 = firebase.database().ref('view/active/section2');
 
 
     // GET Entries AS AN ARRAY
     $scope.entries1 = $firebaseArray(postsRef1);
     $scope.entries2 = $firebaseArray(postsRef2);
-    $scope.viewEntries = $firebaseArray(viewRef);
+    $scope.viewEntries1 = $firebaseArray(viewRef1);
+    $scope.viewEntries2 = $firebaseArray(viewRef2);
 
     // GET Value of currently clicked Entry
-    $scope.setActive = function (event)
+    $scope.setActive1 = function (event)
     {
     //console.log(event.target.innerHTML);
     var viewItem = event.target.innerHTML;
     //console.log("viewItem: " + viewItem);
-    firebase.database().ref().child('view/active').set({data: event.target.innerHTML});
+    firebase.database().ref().child('view/active/section1').set({data: event.target.innerHTML});
+    };
+    $scope.setActive2 = function (event)
+    {
+    //console.log(event.target.innerHTML);
+    var viewItem = event.target.innerHTML;
+    //console.log("viewItem: " + viewItem);
+    firebase.database().ref().child('view/active/section2').set({data: event.target.innerHTML});
     };
     }]);
 
